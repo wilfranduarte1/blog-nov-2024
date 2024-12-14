@@ -1,10 +1,11 @@
 from django.urls import path
 from django.urls import include
+from registro.views import signupView
 
 
-urlspatterns = [ 
-    path("accounts/",include(django.contrib.auth.urls)),
-    path("signup/", signupView.as_view(), name="signup"),
+urlpatterns = [ 
+    path("accounts/",include('django.contrib.auth.urls')),
+    path("", signupView.as_view(), name="signup"),
 
 
 
